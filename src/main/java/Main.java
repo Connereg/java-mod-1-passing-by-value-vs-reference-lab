@@ -1,9 +1,9 @@
-    
-// TURNING THIS ASSIGNMENT IN INITIALLY USING THE SOLUTION METHODS TO ATTEMPT TO BETTER GRASP CONCEPTS 
-// AND AVOID MISINTERPRETATION OF DELIVERABLES
-// I PLAN ON RETURNING TO THIS ASSIGNMENT WITH A BETTER AND MORE FLEXIBLE WAY TO ACHIEVE THE DELIVERABLES BEFORE 
-// THE FINAL TURN IN DEADLINE
+ //MUCH clearer understanding of the material after having worked on the Friday project
 
+ //Still having issues of thinking how to differentiate this process from the solution examples however
+ //Altered the math behind the multiplyNumbers function and changed the output messages to reflect the desired outcomes
+
+    
 class NumberContainer {
     public int number;
 }
@@ -15,30 +15,29 @@ public class Main {
         public static void main(String[] args) {
             // your code here
             NumberContainer myNumber = new NumberContainer();
-            multiplyNumbers(myNumber, 12, 3);
-            System.out.println("Result = " + myNumber.number);
+            multiplyNumbers(myNumber, 43, 2);
+            System.out.println("Result (will be a number!) = " + myNumber.number);
 
             NumberContainer myNumber2 = new NumberContainer();
-            multiplyNumbers(myNumber2, 12, 3);
-            System.out.println("Result = " + myNumber2.number);
+            multiplyNumbers2(myNumber2, 19, 2);
+            System.out.println("Result (Result will be 0) = " + myNumber2.number);
 
             StringContainer myString = new StringContainer();
             myString.text = "Initial value";
             addText(myString, " - adding new text");
-            System.out.println("Modified Text: " + myString.text);
+            System.out.println("The String after this will be visible " + myString.text);
 
             String myString2 = "Initial Value";
             addText2(myString2, " - Lost this text?");
-            System.out.println("Modified Text: " + myString2);
+            System.out.println("The String after this will disappear! " + myString2);
 
         }
         public static void multiplyNumbers(NumberContainer result, int firstNumber, int secondNumber) {
-            result.number = firstNumber * secondNumber;
+            result.number = firstNumber * secondNumber * firstNumber * secondNumber;
         }
         public static void multiplyNumbers2(NumberContainer result, int firstNumber, int secondNumber) {
             result = new NumberContainer();
-            result.number = firstNumber * secondNumber;
-            //Unsure as to how updated result is visible to the calling method, as the new container should make it local to the method?
+            result.number = firstNumber * secondNumber * firstNumber * secondNumber;
         }
         public static void addText(StringContainer result, String newText) {
             result.text = result.text + newText;
